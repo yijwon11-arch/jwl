@@ -1,2 +1,0 @@
-# jwl
-codingtest
