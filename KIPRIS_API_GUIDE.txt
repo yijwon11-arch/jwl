@@ -1,0 +1,25 @@
+"""
+KIPRIS API 키 발급 가이드
+
+1. KIPRIS 홈페이지 방문
+   - https://www.kipris.or.kr
+
+2. 회원가입 및 로그인
+
+3. API 키 발급
+   - 상단 메뉴 > OpenAPI > 서비스 신청
+   - 또는 직접: http://plus.kipris.or.kr/openapi/service/openapi.do
+
+4. 발급받은 API 키를 config/config.json에 입력
+   {
+     "api": {
+       "kipris": {
+         "api_key": "여기에_발급받은_키_입력"
+       }
+     }
+   }
+
+5. 검색 시작!
+   python -m patent_search.cli.main search --keyword "검색할_키워드"
+"""
+print(__doc__)
