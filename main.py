@@ -14,6 +14,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent / 'src'))
 
 from patent_parser import PatentParser
+from file_parser import FileParser
 from search_engine import PriorArtSearchEngine
 from similarity_analyzer import SimilarityAnalyzer
 from report_generator import ReportGenerator
@@ -42,7 +43,7 @@ def main():
     input_group.add_argument(
         '--input', '-i',
         type=str,
-        help='특허 정보가 담긴 JSON 파일 경로'
+        help='특허 정보가 담긴 파일 경로 (지원 형식: .json, .txt, .pdf, .docx, .png, .jpg)'
     )
     input_group.add_argument(
         '--title', '-t',
@@ -112,8 +113,24 @@ def main():
         parser_obj = PatentParser()
 
         if args.input:
-            # JSON 파일에서 읽기
-            patent_data = parser_obj.parse_from_file(args.input)
+            # 파일에서 읽기 (다양한 형식 지원)
+            file_parser = FileParser()
+
+            # 파일 형식 자동 감지 및 파싱
+            try:
+                patent_data = file_parser.parse_file(args.input)
+                print(f"✓ 파일 파싱 완료: {args.input}")
+            except ImportError as e:
+                print(f"경고: {e}")
+                print("필요한 라이브러리를 설치하거나 JSON 파일을 사용하세요.")
+                sys.exit(1)
+            except Exception as e:
+                print(f"파일 파싱 오류: {e}")
+                sys.exit(1)
+
+            # 키워드가 없으면 자동 추출
+            if not patent_data.get('keywords'):
+                patent_data = parser_obj.parse(patent_data)
         else:
             # 커맨드라인 인자에서 구성
             patent_data = parser_obj.parse({

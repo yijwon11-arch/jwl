@@ -5,13 +5,15 @@
 """
 
 from .patent_parser import PatentParser
+from .file_parser import FileParser
 from .search_engine import PriorArtSearchEngine
 from .similarity_analyzer import SimilarityAnalyzer
 from .report_generator import ReportGenerator
 
-__version__ = '1.0.0'
+__version__ = '2.0.0'
 __all__ = [
     'PatentParser',
+    'FileParser',
     'PriorArtSearchEngine',
     'SimilarityAnalyzer',
     'ReportGenerator'
