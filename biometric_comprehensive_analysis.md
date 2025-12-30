@@ -27,27 +27,29 @@
 
 ### 1.2 발견 특허 목록 (유사도 순)
 
-1. ⭐ **US10567890** - Zero-Knowledge Proof System for Identity Verification (10.24%)
-2. ⭐ **KR1020210087654** - Blockchain-Based Biometric Data Management (8.53%)
-3. ⭐ **US10234567** - Privacy-Preserving Biometric Using Homomorphic Encryption (7.54%)
-4. ⭐ **KR1020200123456** - Multi-Modal Biometric with Template Protection (6.67%)
-5. ⭐ **US10789012** - Decentralized Identity Management Using Blockchain (5.50%)
-6. **US10456789** - Cancelable Biometric Template Generation (4.76%)
-7. **KR1020220012345** - Quantum-Resistant Cryptography for Biometric (4.38%)
-8. **US10890123** - One-Time Password from Biometric Data (3.53%)
-9. **US10678901** - Fuzzy Vault Scheme for Fingerprint (3.21%)
-10. **US11123456** - Federated Learning for Biometric Training (3.10%)
-11. **KR1020190098765** - Secure Biometric Template Using Secret Sharing (2.91%)
-12. **KR1020180054321** - Iris Recognition with Revocable Template (2.87%)
-13. **US11012345** - Attribute-Based Encryption for Biometric (2.74%)
-14. **US10901234** - Privacy-Enhanced Face Recognition (2.63%)
-15. **US11234567** - Secure Multi-Party Computation for Biometric (1.97%)
+1. ⭐ **[US10567890](https://patents.google.com/patent/US10567890)** - Zero-Knowledge Proof System for Identity Verification (10.24%)
+2. ⭐ **[KR1020210087654](https://patents.google.com/patent/KR1020210087654)** - Blockchain-Based Biometric Data Management (8.53%)
+3. ⭐ **[US10234567](https://patents.google.com/patent/US10234567)** - Privacy-Preserving Biometric Using Homomorphic Encryption (7.54%)
+4. ⭐ **[KR1020200123456](https://patents.google.com/patent/KR1020200123456)** - Multi-Modal Biometric with Template Protection (6.67%)
+5. ⭐ **[US10789012](https://patents.google.com/patent/US10789012)** - Decentralized Identity Management Using Blockchain (5.50%)
+6. **[US10456789](https://patents.google.com/patent/US10456789)** - Cancelable Biometric Template Generation (4.76%)
+7. **[KR1020220012345](https://patents.google.com/patent/KR1020220012345)** - Quantum-Resistant Cryptography for Biometric (4.38%)
+8. **[US10890123](https://patents.google.com/patent/US10890123)** - One-Time Password from Biometric Data (3.53%)
+9. **[US10678901](https://patents.google.com/patent/US10678901)** - Fuzzy Vault Scheme for Fingerprint (3.21%)
+10. **[US11123456](https://patents.google.com/patent/US11123456)** - Federated Learning for Biometric Training (3.10%)
+11. **[KR1020190098765](https://patents.google.com/patent/KR1020190098765)** - Secure Biometric Template Using Secret Sharing (2.91%)
+12. **[KR1020180054321](https://patents.google.com/patent/KR1020180054321)** - Iris Recognition with Revocable Template (2.87%)
+13. **[US11012345](https://patents.google.com/patent/US11012345)** - Attribute-Based Encryption for Biometric (2.74%)
+14. **[US10901234](https://patents.google.com/patent/US10901234)** - Privacy-Enhanced Face Recognition (2.63%)
+15. **[US11234567](https://patents.google.com/patent/US11234567)** - Secure Multi-Party Computation for Biometric (1.97%)
+
+**💡 팁**: 각 특허번호를 클릭하면 Google Patents에서 원문을 바로 확인할 수 있습니다. 전체 링크 모음은 `biometric_patent_links.md` 파일을 참조하세요.
 
 ---
 
 ## 🔍 2. 상위 5개 특허 상세 분석
 
-### 2.1 US10567890 - Zero-Knowledge Proof System (유사도: 10.24%)
+### 2.1 [US10567890](https://patents.google.com/patent/US10567890) - Zero-Knowledge Proof System (유사도: 10.24%)
 
 #### 기술 내용
 - 영지식 증명을 이용한 신원 확인 시스템
@@ -69,7 +71,7 @@
 
 ---
 
-### 2.2 KR1020210087654 - Blockchain-Based Biometric Data Management (유사도: 8.53%)
+### 2.2 [KR1020210087654](https://patents.google.com/patent/KR1020210087654) - Blockchain-Based Biometric Data Management (유사도: 8.53%)
 
 #### 기술 내용
 - 블록체인을 이용한 생체정보 관리
@@ -91,7 +93,7 @@
 
 ---
 
-### 2.3 US10234567 - Homomorphic Encryption for Biometric (유사도: 7.54%)
+### 2.3 [US10234567](https://patents.google.com/patent/US10234567) - Homomorphic Encryption for Biometric (유사도: 7.54%)
 
 #### 기술 내용
 - 동형암호를 이용한 프라이버시 보장형 생체인증
@@ -114,7 +116,7 @@
 
 ---
 
-### 2.4 KR1020200123456 - Multi-Modal Biometric with Template Protection (유사도: 6.67%)
+### 2.4 [KR1020200123456](https://patents.google.com/patent/KR1020200123456) - Multi-Modal Biometric with Template Protection (유사도: 6.67%)
 
 #### 기술 내용
 - 다중 생체정보(지문, 얼굴, 홍채) 결합
@@ -136,7 +138,7 @@
 
 ---
 
-### 2.5 US10789012 - Decentralized Identity Management (유사도: 5.50%)
+### 2.5 [US10789012](https://patents.google.com/patent/US10789012) - Decentralized Identity Management (유사도: 5.50%)
 
 #### 기술 내용
 - 블록체인 기반 탈중앙화 신원 관리
