@@ -188,6 +188,140 @@ class PriorArtSearchEngine:
             더미 특허 정보 리스트
         """
         # 실제 검색 실패 시 또는 테스트용으로 사용
+        # max_results 만큼 더미 데이터 생성
+        dummy_patents = []
+
+        # 키워드에 따라 다른 더미 데이터 생성
+        keywords_lower = query.lower()
+
+        # 생체인증 관련 키워드 감지
+        is_biometric = any(kw in keywords_lower for kw in [
+            'biometric', '생체', 'fingerprint', '지문', 'face', '얼굴',
+            'iris', '홍채', 'zero-knowledge', '영지식', 'blockchain', '블록체인',
+            'privacy', '프라이버시', 'untraceable', '추적'
+        ])
+
+        if is_biometric:
+            # 생체인증 관련 더미 특허들
+            dummy_patents = self._get_biometric_dummy_patents()
+        else:
+            # 일반 더미 특허들
+            dummy_patents = self._get_general_dummy_patents(query)
+
+        return dummy_patents[:self.max_results]
+
+    def _get_biometric_dummy_patents(self) -> List[Dict]:
+        """생체인증 관련 더미 특허 생성"""
+        return [
+            {
+                'title': 'Privacy-Preserving Biometric Authentication Using Homomorphic Encryption',
+                'abstract': '본 발명은 동형암호(Homomorphic Encryption)를 이용한 프라이버시 보장형 생체인증 방법에 관한 것이다. 생체정보를 암호화한 상태에서 비교 연산을 수행하여 복호화 없이 인증을 완료한다. 그러나 영지식 증명 기법은 사용하지 않으며, 블록체인 대신 중앙 서버를 사용한다.',
+                'patent_number': 'US10234567',
+                'url': 'https://patents.google.com/patent/US10234567',
+                'source': 'USPTO'
+            },
+            {
+                'title': 'Blockchain-Based Biometric Data Management System',
+                'abstract': '블록체인을 이용한 생체정보 관리 시스템으로, 사용자의 생체정보를 블록체인에 저장한다. 분산저장을 통해 데이터 무결성을 보장하나, 생체정보 원본을 해싱하여 저장하므로 일회용 토큰 방식은 아니다.',
+                'patent_number': 'KR1020210087654',
+                'url': 'https://patents.google.com/patent/KR1020210087654',
+                'source': 'KIPRIS'
+            },
+            {
+                'title': 'Cancelable Biometric Template Generation Method',
+                'abstract': 'Cancelable Biometric 기법을 이용하여 생체정보 템플릿을 생성한다. 유출 시 템플릿을 폐기하고 새로운 템플릿을 발급할 수 있으나, 영지식 증명이나 일회용 토큰 방식은 사용하지 않는다.',
+                'patent_number': 'US10456789',
+                'url': 'https://patents.google.com/patent/US10456789',
+                'source': 'USPTO'
+            },
+            {
+                'title': 'Zero-Knowledge Proof System for Identity Verification',
+                'abstract': '영지식 증명을 이용한 신원 확인 시스템이나, 생체정보가 아닌 일반 신원정보(ID, 비밀번호)를 대상으로 한다. zk-SNARK 프로토콜을 사용하지만 생체인증과는 결합되지 않았다.',
+                'patent_number': 'US10567890',
+                'url': 'https://patents.google.com/patent/US10567890',
+                'source': 'USPTO'
+            },
+            {
+                'title': 'Multi-Modal Biometric Authentication with Template Protection',
+                'abstract': '다중 생체정보(지문, 얼굴, 홍채)를 결합한 인증 시스템으로 템플릿 보호 기능을 제공한다. 그러나 매 인증마다 동일한 템플릿을 사용하므로 추적 가능성이 존재한다.',
+                'patent_number': 'KR1020200123456',
+                'url': 'https://patents.google.com/patent/KR1020200123456',
+                'source': 'KIPRIS'
+            },
+            {
+                'title': 'Fuzzy Vault Scheme for Fingerprint Authentication',
+                'abstract': 'Fuzzy Vault 기법을 이용한 지문 인증 방법이다. 생체정보의 변동성을 허용하면서도 보안을 유지하나, 일회용 토큰 방식이나 영지식 증명은 사용하지 않는다.',
+                'patent_number': 'US10678901',
+                'url': 'https://patents.google.com/patent/US10678901',
+                'source': 'USPTO'
+            },
+            {
+                'title': 'Decentralized Identity Management Using Blockchain',
+                'abstract': '블록체인 기반 탈중앙화 신원 관리 시스템이다. 사용자 신원정보를 블록체인에 저장하고 분산 검증을 수행하나, 생체인증 특화 기능은 없다.',
+                'patent_number': 'US10789012',
+                'url': 'https://patents.google.com/patent/US10789012',
+                'source': 'USPTO'
+            },
+            {
+                'title': 'Secure Biometric Template Storage Using Secret Sharing',
+                'abstract': '비밀분산(Secret Sharing) 기법을 이용한 생체 템플릿 저장 방법이다. 템플릿을 여러 조각으로 나누어 분산 저장하나, 영지식 증명이나 일회용 토큰은 미포함이다.',
+                'patent_number': 'KR1020190098765',
+                'url': 'https://patents.google.com/patent/KR1020190098765',
+                'source': 'KIPRIS'
+            },
+            {
+                'title': 'One-Time Password Generation from Biometric Data',
+                'abstract': '생체정보를 이용한 일회용 비밀번호(OTP) 생성 방법이다. 생체정보로부터 일회성 값을 생성하나, 영지식 증명이나 블록체인 기술은 사용하지 않는다.',
+                'patent_number': 'US10890123',
+                'url': 'https://patents.google.com/patent/US10890123',
+                'source': 'USPTO'
+            },
+            {
+                'title': 'Privacy-Enhanced Face Recognition Using Differential Privacy',
+                'abstract': '차등 프라이버시(Differential Privacy)를 적용한 얼굴 인식 시스템이다. 노이즈 추가를 통해 프라이버시를 보호하나, 영지식 증명이나 일회용 토큰은 사용하지 않는다.',
+                'patent_number': 'US10901234',
+                'url': 'https://patents.google.com/patent/US10901234',
+                'source': 'USPTO'
+            },
+            {
+                'title': 'Iris Recognition with Revocable Template',
+                'abstract': '폐기 가능한 템플릿을 사용하는 홍채 인식 시스템이다. 보안 침해 시 템플릿을 폐기하고 재발급할 수 있으나, 매 인증마다 새로운 토큰을 생성하지는 않는다.',
+                'patent_number': 'KR1020180054321',
+                'url': 'https://patents.google.com/patent/KR1020180054321',
+                'source': 'KIPRIS'
+            },
+            {
+                'title': 'Attribute-Based Encryption for Biometric Data Protection',
+                'abstract': '속성 기반 암호화(ABE)를 이용한 생체정보 보호 방법이다. 사용자 속성에 따라 암호화/복호화 권한을 부여하나, 영지식 증명이나 추적불가능성 기능은 없다.',
+                'patent_number': 'US11012345',
+                'url': 'https://patents.google.com/patent/US11012345',
+                'source': 'USPTO'
+            },
+            {
+                'title': 'Federated Learning for Privacy-Preserving Biometric Model Training',
+                'abstract': '연합학습(Federated Learning)을 이용한 프라이버시 보장형 생체인식 모델 학습 방법이다. 생체정보를 중앙으로 모으지 않고 분산 학습하나, 인증 프로세스 자체는 일반적인 방식이다.',
+                'patent_number': 'US11123456',
+                'url': 'https://patents.google.com/patent/US11123456',
+                'source': 'USPTO'
+            },
+            {
+                'title': 'Quantum-Resistant Cryptography for Biometric Authentication',
+                'abstract': '양자내성 암호를 적용한 생체인증 시스템이다. 양자컴퓨터 공격에도 안전하도록 설계되었으나, 영지식 증명이나 일회용 토큰 방식은 미포함이다.',
+                'patent_number': 'KR1020220012345',
+                'url': 'https://patents.google.com/patent/KR1020220012345',
+                'source': 'KIPRIS'
+            },
+            {
+                'title': 'Secure Multi-Party Computation for Biometric Matching',
+                'abstract': '다자간 보안 계산(Secure Multi-Party Computation)을 이용한 생체정보 매칭 방법이다. 여러 참여자가 자신의 생체정보를 공개하지 않고 매칭을 수행하나, 블록체인이나 영지식 증명은 사용하지 않는다.',
+                'patent_number': 'US11234567',
+                'url': 'https://patents.google.com/patent/US11234567',
+                'source': 'USPTO'
+            }
+        ]
+
+    def _get_general_dummy_patents(self, query: str) -> List[Dict]:
+        """일반 더미 특허 생성"""
         return [
             {
                 'title': f'관련 특허 1: {query[:30]}...',

@@ -1,0 +1,179 @@
+{
+  "timestamp": "2025-12-30 23:35:42",
+  "source_patent": {
+    "title": "추적불가능한 생체인증 기술 및 시스템",
+    "abstract": "본 발명은 사용자의 생체정보를 이용하여 인증을 수행하되, 생체정보 자체를 저장하거나 전송하지 않음으로써 개인정보 추적 및 역추적이 불가능한 생체인증 기술에 관한 것이다. 구체적으로, 사용자의 지문, 얼굴, 홍채 등의 생체정보로부터 임시 토큰을 생성하고, 이를 영지식 증명(Zero-Knowledge Proof) 기법과 결합하여 생체정보 원본 없이도 본인 확인이 가능하도록 한다. 또한 블록체인 기반 분산 저장 구조를 통해 중앙 서버의 데이터 유출 위험을 원천 차단하며, 매 인증마다 다른 일회용 생체 토큰을 생성하여 재사용 공격을 방지한다. 이를 통해 생체정보 유출 시에도 타 시스템에서의 악용이 불가능하고, 사용자의 인증 이력 추적이 불가능한 완전한 프라이버시 보장형 생체인증 시스템을 구현한다.",
+    "claims": [
+      "청구항 1: 사용자의 생체정보를 획득하는 생체정보 획득부; 상기 생체정보로부터 특징점을 추출하고 일회용 생체 토큰을 생성하는 토큰 생성부; 상기 일회용 생체 토큰을 영지식 증명(Zero-Knowledge Proof) 알고리즘으로 처리하여 검증 데이터를 생성하되, 원본 생체정보의 복원이 불가능하도록 하는 영지식 증명부; 및 상기 검증 데이터를 블록체인 네트워크에 분산 저장하는 분산 저장부를 포함하는 추적불가능한 생체인증 시스템.",
+      "청구항 2: 청구항 1에 있어서, 상기 토큰 생성부는 매 인증 요청마다 서로 다른 난수(nonce)를 생체정보 특징점과 결합하여 일회용 토큰을 생성함으로써, 동일한 생체정보로부터 생성된 토큰이라도 매번 다른 값을 갖도록 하는 것을 특징으로 하는 추적불가능한 생체인증 시스템.",
+      "청구항 3: 청구항 1에 있어서, 상기 영지식 증명부는 zk-SNARK(Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) 또는 zk-STARK(Zero-Knowledge Scalable Transparent Argument of Knowledge) 프로토콜을 사용하여, 생체정보 일치 여부를 증명하되 생체정보 자체는 공개하지 않는 것을 특징으로 하는 추적불가능한 생체인증 시스템.",
+      "청구항 4: 청구항 1에 있어서, 상기 분산 저장부는 사용자의 검증 데이터를 복수의 블록체인 노드에 샤딩(sharding)하여 저장하고, 인증 시 과반수 노드의 합의를 통해 검증을 수행함으로써 단일 노드 공격으로는 생체정보 복원이 불가능하도록 하는 것을 특징으로 하는 추적불가능한 생체인증 시스템.",
+      "청구항 5: 청구항 1에 있어서, 상기 생체정보 획득부는 지문, 얼굴, 홍채, 정맥, 음성 중 적어도 하나 이상의 생체정보를 획득하고, 다중 생체정보를 결합하여 하나의 통합 토큰을 생성하는 멀티모달 생체인증을 지원하는 것을 특징으로 하는 추적불가능한 생체인증 시스템.",
+      "청구항 6: 청구항 1에 있어서, 인증 완료 후 상기 일회용 생체 토큰 및 검증 데이터를 자동으로 폐기하고, 사용자의 인증 이력을 블록체인 상에서도 추적 불가능하도록 암호화된 트랜잭션 ID만을 기록하는 것을 특징으로 하는 추적불가능한 생체인증 시스템."
+    ],
+    "keywords": [
+      "추적불가능",
+      "생체인증",
+      "영지식증명",
+      "Zero-Knowledge Proof",
+      "zk-SNARK",
+      "zk-STARK",
+      "블록체인",
+      "분산저장",
+      "프라이버시",
+      "일회용 토큰",
+      "생체정보 보호",
+      "지문인증",
+      "얼굴인증",
+      "홍채인증",
+      "바이오메트릭",
+      "개인정보보호",
+      "익명인증",
+      "복원불가능",
+      "샤딩",
+      "멀티모달"
+    ]
+  },
+  "results": [
+    {
+      "title": "Zero-Knowledge Proof System for Identity Verification",
+      "abstract": "영지식 증명을 이용한 신원 확인 시스템이나, 생체정보가 아닌 일반 신원정보(ID, 비밀번호)를 대상으로 한다. zk-SNARK 프로토콜을 사용하지만 생체인증과는 결합되지 않았다.",
+      "patent_number": "US10567890",
+      "url": "https://patents.google.com/patent/US10567890",
+      "source": "USPTO",
+      "similarity_score": 0.10240173348530691,
+      "similarity_percentage": "10.24%"
+    },
+    {
+      "title": "Blockchain-Based Biometric Data Management System",
+      "abstract": "블록체인을 이용한 생체정보 관리 시스템으로, 사용자의 생체정보를 블록체인에 저장한다. 분산저장을 통해 데이터 무결성을 보장하나, 생체정보 원본을 해싱하여 저장하므로 일회용 토큰 방식은 아니다.",
+      "patent_number": "KR1020210087654",
+      "url": "https://patents.google.com/patent/KR1020210087654",
+      "source": "KIPRIS",
+      "similarity_score": 0.0853210051808885,
+      "similarity_percentage": "8.53%"
+    },
+    {
+      "title": "Privacy-Preserving Biometric Authentication Using Homomorphic Encryption",
+      "abstract": "본 발명은 동형암호(Homomorphic Encryption)를 이용한 프라이버시 보장형 생체인증 방법에 관한 것이다. 생체정보를 암호화한 상태에서 비교 연산을 수행하여 복호화 없이 인증을 완료한다. 그러나 영지식 증명 기법은 사용하지 않으며, 블록체인 대신 중앙 서버를 사용한다.",
+      "patent_number": "US10234567",
+      "url": "https://patents.google.com/patent/US10234567",
+      "source": "USPTO",
+      "similarity_score": 0.07536194775358701,
+      "similarity_percentage": "7.54%"
+    },
+    {
+      "title": "Multi-Modal Biometric Authentication with Template Protection",
+      "abstract": "다중 생체정보(지문, 얼굴, 홍채)를 결합한 인증 시스템으로 템플릿 보호 기능을 제공한다. 그러나 매 인증마다 동일한 템플릿을 사용하므로 추적 가능성이 존재한다.",
+      "patent_number": "KR1020200123456",
+      "url": "https://patents.google.com/patent/KR1020200123456",
+      "source": "KIPRIS",
+      "similarity_score": 0.06671739149631002,
+      "similarity_percentage": "6.67%"
+    },
+    {
+      "title": "Decentralized Identity Management Using Blockchain",
+      "abstract": "블록체인 기반 탈중앙화 신원 관리 시스템이다. 사용자 신원정보를 블록체인에 저장하고 분산 검증을 수행하나, 생체인증 특화 기능은 없다.",
+      "patent_number": "US10789012",
+      "url": "https://patents.google.com/patent/US10789012",
+      "source": "USPTO",
+      "similarity_score": 0.05504674519425651,
+      "similarity_percentage": "5.50%"
+    },
+    {
+      "title": "Cancelable Biometric Template Generation Method",
+      "abstract": "Cancelable Biometric 기법을 이용하여 생체정보 템플릿을 생성한다. 유출 시 템플릿을 폐기하고 새로운 템플릿을 발급할 수 있으나, 영지식 증명이나 일회용 토큰 방식은 사용하지 않는다.",
+      "patent_number": "US10456789",
+      "url": "https://patents.google.com/patent/US10456789",
+      "source": "USPTO",
+      "similarity_score": 0.0475866386169053,
+      "similarity_percentage": "4.76%"
+    },
+    {
+      "title": "Quantum-Resistant Cryptography for Biometric Authentication",
+      "abstract": "양자내성 암호를 적용한 생체인증 시스템이다. 양자컴퓨터 공격에도 안전하도록 설계되었으나, 영지식 증명이나 일회용 토큰 방식은 미포함이다.",
+      "patent_number": "KR1020220012345",
+      "url": "https://patents.google.com/patent/KR1020220012345",
+      "source": "KIPRIS",
+      "similarity_score": 0.04375736933962196,
+      "similarity_percentage": "4.38%"
+    },
+    {
+      "title": "One-Time Password Generation from Biometric Data",
+      "abstract": "생체정보를 이용한 일회용 비밀번호(OTP) 생성 방법이다. 생체정보로부터 일회성 값을 생성하나, 영지식 증명이나 블록체인 기술은 사용하지 않는다.",
+      "patent_number": "US10890123",
+      "url": "https://patents.google.com/patent/US10890123",
+      "source": "USPTO",
+      "similarity_score": 0.03534437822648847,
+      "similarity_percentage": "3.53%"
+    },
+    {
+      "title": "Fuzzy Vault Scheme for Fingerprint Authentication",
+      "abstract": "Fuzzy Vault 기법을 이용한 지문 인증 방법이다. 생체정보의 변동성을 허용하면서도 보안을 유지하나, 일회용 토큰 방식이나 영지식 증명은 사용하지 않는다.",
+      "patent_number": "US10678901",
+      "url": "https://patents.google.com/patent/US10678901",
+      "source": "USPTO",
+      "similarity_score": 0.03208176205277718,
+      "similarity_percentage": "3.21%"
+    },
+    {
+      "title": "Federated Learning for Privacy-Preserving Biometric Model Training",
+      "abstract": "연합학습(Federated Learning)을 이용한 프라이버시 보장형 생체인식 모델 학습 방법이다. 생체정보를 중앙으로 모으지 않고 분산 학습하나, 인증 프로세스 자체는 일반적인 방식이다.",
+      "patent_number": "US11123456",
+      "url": "https://patents.google.com/patent/US11123456",
+      "source": "USPTO",
+      "similarity_score": 0.03104974218234573,
+      "similarity_percentage": "3.10%"
+    },
+    {
+      "title": "Secure Biometric Template Storage Using Secret Sharing",
+      "abstract": "비밀분산(Secret Sharing) 기법을 이용한 생체 템플릿 저장 방법이다. 템플릿을 여러 조각으로 나누어 분산 저장하나, 영지식 증명이나 일회용 토큰은 미포함이다.",
+      "patent_number": "KR1020190098765",
+      "url": "https://patents.google.com/patent/KR1020190098765",
+      "source": "KIPRIS",
+      "similarity_score": 0.02914925477415739,
+      "similarity_percentage": "2.91%"
+    },
+    {
+      "title": "Iris Recognition with Revocable Template",
+      "abstract": "폐기 가능한 템플릿을 사용하는 홍채 인식 시스템이다. 보안 침해 시 템플릿을 폐기하고 재발급할 수 있으나, 매 인증마다 새로운 토큰을 생성하지는 않는다.",
+      "patent_number": "KR1020180054321",
+      "url": "https://patents.google.com/patent/KR1020180054321",
+      "source": "KIPRIS",
+      "similarity_score": 0.028742313974945578,
+      "similarity_percentage": "2.87%"
+    },
+    {
+      "title": "Attribute-Based Encryption for Biometric Data Protection",
+      "abstract": "속성 기반 암호화(ABE)를 이용한 생체정보 보호 방법이다. 사용자 속성에 따라 암호화/복호화 권한을 부여하나, 영지식 증명이나 추적불가능성 기능은 없다.",
+      "patent_number": "US11012345",
+      "url": "https://patents.google.com/patent/US11012345",
+      "source": "USPTO",
+      "similarity_score": 0.027422252982839467,
+      "similarity_percentage": "2.74%"
+    },
+    {
+      "title": "Privacy-Enhanced Face Recognition Using Differential Privacy",
+      "abstract": "차등 프라이버시(Differential Privacy)를 적용한 얼굴 인식 시스템이다. 노이즈 추가를 통해 프라이버시를 보호하나, 영지식 증명이나 일회용 토큰은 사용하지 않는다.",
+      "patent_number": "US10901234",
+      "url": "https://patents.google.com/patent/US10901234",
+      "source": "USPTO",
+      "similarity_score": 0.026305621009029147,
+      "similarity_percentage": "2.63%"
+    },
+    {
+      "title": "Secure Multi-Party Computation for Biometric Matching",
+      "abstract": "다자간 보안 계산(Secure Multi-Party Computation)을 이용한 생체정보 매칭 방법이다. 여러 참여자가 자신의 생체정보를 공개하지 않고 매칭을 수행하나, 블록체인이나 영지식 증명은 사용하지 않는다.",
+      "patent_number": "US11234567",
+      "url": "https://patents.google.com/patent/US11234567",
+      "source": "USPTO",
+      "similarity_score": 0.019661468882685586,
+      "similarity_percentage": "1.97%"
+    }
+  ],
+  "statistics": {
+    "total_results": 15,
+    "average_similarity": 0.047063308343476315,
+    "high_similarity_count": 0
+  }
+}
