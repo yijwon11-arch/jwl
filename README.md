@@ -43,3 +43,4 @@ GitHub Actions 탭에서 "Daily AI News Digest" 워크플로우를 수동으로 
 
 ## 📅 뉴스 아카이브
 
+- [2025-12-30](./news/ai-news-2025-12-30.md)
